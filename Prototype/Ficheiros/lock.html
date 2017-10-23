@@ -1,0 +1,135 @@
+<HTML HEIGHT="100%" style="background: white;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="main_watch.css"      rel="stylesheet" type="text/css"> <link/>
+	<link href="lock.css"      	rel="stylesheet" type="text/css"> <link/>
+	<script src="lock.js"></script>
+	<script src="_.js"></script>
+	<script src="cookie.js"></script>
+	<style>
+        .turning-on{
+		-webkit-animation: ligar 0.3s;
+				animation: ligar 0.3s;
+	       animation-fill-mode: forwards; 
+    -webkit-animation-fill-mode: forwards; 
+	}
+	@-webkit-keyframes ligar {
+        0% {width:0%; height: 0%;margin-top:50px;border-radius: 100%}
+        10% {width:10; height: 95%;margin-top:3px;border-radius: 20%}
+		100% {width:100%; height: 100%;margin-top:0;border-radius: 0;}
+	}
+            @keyframes ligar {
+        0% {width:0%; height: 0%;margin-top:50px;border-radius: 100%}
+        10% {width:10; height: 95%;margin-top:3px;border-radius: 20%}
+		100% {width:100%; height: 100%;margin-top:0;border-radius: 0;}
+	}
+    </style>
+	<script>
+        function goLock(){
+            document.location='main_watch.html';
+        }
+    </script>
+    <style>
+		.botoes_people{
+			position: absolute;
+			top: 0%;
+		}
+        #bot_1{
+            left: 0;
+            position: absolute;
+            margin-top: 40px;
+        }
+        #bot_2{
+            left: 0;
+            position: absolute;
+            margin-top: 50px;
+        }
+        #bot_3{
+            left: 0;
+            position: absolute;
+            margin-top: 80px;
+        }
+	</style>
+	
+</head>
+<BODY style="background: white;" onLoad="verHoras();onLoadLock();">
+<TABLE id="tabela" style="background: white;" Height="100%" WIDTH="100%" BORDER="0" > 
+	
+	<TD >
+    <div class="botoes_people"> Escolher o dia: (muda actividade a mostrar)
+		<button id="bot_1" onClick="setCookie('dia',16,1);location.reload();">Dia 1 (Default)</button>
+		<button id="bot_2" onClick="setCookie('dia',17,1);location.reload();">Dia 2</button>		
+		<button id="bot_3" onClick="setCookie('dia',18,1);location.reload();">Dia 3</button>		
+	</div>
+	<center>
+		<div id="black_stripe"></div>
+		<div id="container">
+			<div id="ecra-edge" style="background: grey"><div id="off_screen" class="turning-on" style="background: white;width:0%;height:0%"></div>
+				
+				<table>
+					<tr width = 100%>
+
+						<td>
+							<table>
+								<td>
+									<p class="texto_horas" id="hour"></p>
+								</td>
+								
+								<td>
+									<p class="texto_horas" id="hour_h">h</P>
+								</td>
+								
+								<td>
+									<p class="texto_horas" id="minute"></p>	
+								</td>
+								
+							</table>
+						</td>
+						<td>	
+								<div id="img_lock_drone"></div>
+								<span class="texto_horas drone" id="drone_min">05</span>
+								
+								<span class="texto_horas drone" id="drone_h" >:</span>
+
+								<span class="texto_horas drone" id="drone_seg">00</span>
+						</td>
+					
+
+					
+					</tr>
+			
+					<tr>
+						<td>
+							<marquee id="evento1">Sem</marquee>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<p id="evento2">Actividade</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<marquee id="texto_unlock" style="color:blue"><b>Deslizar para Desbloquear</b></marquee>
+						</td>
+					</tr>
+				</table>
+				<p id="evento3">Sem</p>
+			<hr width="70" style="position:absolute;left:15px; top:40%">
+			
+			</div>
+			<div id="real_image_lock"></div>
+			<div id="img_lock" onClick="goLock()"></div>
+			<div id="image_mais"></div>
+			<div id="but_mais" onClick="bigger()"></div>
+			<div id="image_menos"></div>
+			<div id="but_menos" onClick="smaller()"></div>
+			<div onClick="goUp()"  id="back_button"></div>
+		</div>
+		
+		<div id="black_stripe"></div>
+	</center>
+	</TD>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<HTML HEIGHT="100%" style="background: white;">
+<head>
+	<link href="main_watch.css"      rel="stylesheet" type="text/css"> <link/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="cookie.js"></script>
+    <script src="_.js"></script>
+    <script>
+        function ligar(){
+            document.getElementById('off_screen').className = "turning-on";
+            setTimeout(function(){document.location = 'lock.html'},0);
+        }
+    </script>
+    <style>
+    .shutting_down{
+		-webkit-animation: desligar 0.3s;
+				animation: desligar 0.3s;
+	       animation-fill-mode: forwards; 
+    -webkit-animation-fill-mode: forwards; 
+	}
+	@-webkit-keyframes desligar {
+		0% {width:100%; height: 100%;margin-top:0;border-radius: 0;}
+        90% {width:10; height: 95%;margin-top:3px;border-radius: 20%}
+        100% {width:0%; height: 0%;margin-top:50px;border-radius: 100%}
+	}
+            @keyframes desligar {
+		0% {width:100%; height: 100%;margin-top:0;border-radius: 0;}
+        90% {width:10; height: 95%;margin-top:3px;border-radius: 20%}
+        100% {width:0%; height: 0%;margin-top:50px;border-radius: 100%}
+	}
+
+    </style>
+    <script>
+        function prev_tuturial(){
+            faz_subir("avatar_camera.html");
+        }
+        function next_tuturial(){
+            setCookie('what to do',"",1);
+            faz_direita("camera_tut2.html");
+        }
+
+    </script>
+</head>
+<BODY onLoad="load_animation();load_tuturial();dronesEverywhere()" style="background: white;">
+<TABLE id="tabela" style="background: white;" Height="100%" WIDTH="100%" BORDER="0" > 
+	<TD>
+	<center>
+		<div id="black_stripe"></div>
+		<div id="container">
+			<div  id="ecra-edge"><div id="moving_ecra" class="">
+                <div style="background:url(./imagens/imagem_camera.jpg);background-size: cover;background-repeat:no-repeat;width:100%;height:100%"></div>
+                <!--
+                    <div id="off_screen" class="shutting_down" style="background: white;width:100%;height:100%">
+                    </div>
+                -->
+                <div id="tuturial">
+                    <div id="onde_escrevemos" class="">
+                        <img id="arrow" src="./imagens/arrow.png" style="left:20%;top:10%;position:absolute;height:20%;width:30%;transform: rotate(-110deg);"></img>
+                        <div style="font-size: large;position:absolute; width:100%;top:40%;text-align:center;">Camara</div>
+                        <img onClick="next_tuturial()" src="imagens/right-arrow.png" style="z-index:5;position:absolute;bottom:5;right:5;width:27;height:20">  </img>   
+                    </div>
+                </div>
+            </div></div>
+			<div id="real_image_lock"></div>
+			<div id="img_lock" onClick="ligar()"></div>
+			<div id="image_mais"></div>
+			<div id="but_mais" onClick="bigger()"></div>
+			<div id="image_menos"></div>
+			<div id="but_menos" onClick="smaller()"></div>
+			<div onmousedown="	document.getElementById('back_button').style.border = '2px solid grey';" onmouseup="	document.getElementById('back_button').style.border = '2px solid white'" onmouseout="	document.getElementById('back_button').style.border = '2px solid white'" onClick="prev_tuturial()" id="back_button"></div>
+            <div style="background:grey;border-radius:50%; position:relative; top:-204px;left:-22px;width:10px;height:10px;"></div>
+		</div>
+		<div id="black_stripe"></div>
+	</center>
+	</TD>
+</body>
+</html>
+	
+	
+	
+	
+<!--
+	
+	<div style="display:table;text-align:center">
+			<div style="display:table-cell;text-align:center">
+				<iframe style="position: absolute; height:1.06in; width:1.06in;vertical-align:middle;background:green;z-index:1;"></iframe>
+				<div style="position: absolute;Display:table-cell; height:3in; width:3in;vertical-align:middle;background:black;">a</div>
+		</div>

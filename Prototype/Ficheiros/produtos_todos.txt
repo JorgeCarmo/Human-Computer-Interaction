@@ -1,0 +1,8 @@
+Pizza_Hut	Comida
+			Bebida
+			(Podem por mais categorias)
+MccDonalds
+
+Tasca Ze/Manel(escolher 1)
+Pans
+Oficial Store

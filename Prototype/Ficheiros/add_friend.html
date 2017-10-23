@@ -1,0 +1,74 @@
+<HTML HEIGHT="100%" style="background: white;">
+<head>
+	<link href="main_watch.css"      rel="stylesheet" type="text/css"> <link/>
+	<link href="friends.css"      	rel="stylesheet" type="text/css"> <link/>
+	<script src="add_friend.js"></script>
+	<script src="_.js"></script>
+	<script src="cookie.js"></script>
+	<style>
+		.botoes_people{
+			position: absolute;
+            top: 10%;
+            left:20%;
+		}
+        #bot_1{
+            left: 10;
+            position: absolute;
+            margin-top: 40px;
+            width: 200px;
+            height: 50px;
+        }
+        #bot_2{
+            left: 10;
+            position: absolute;
+            margin-top: 80px;
+            width: 200px;
+            height: 50px;
+        }
+        #bot_3{
+            left: 10;
+            position: absolute;
+            margin-top: 140px;
+            width: 200px;
+            height: 50px;
+        }
+	</style>
+	<script src="drones.js"></script>
+	<script src="drone_popup.js"></script>
+	<link href="popup.css"      	rel="stylesheet" type="text/css"> <link/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<BODY style="background: white;" onLoad="load_animation();dronesEverywhere()">
+<TABLE id="tabela" style="background: white;" Height="100%" WIDTH="100%" BORDER="0" > 
+	<TD >
+		
+	
+	<center>
+	<div class="botoes_people"> Escolher grupo de pessoas "que está por perto":
+		<button id="bot_1" onClick="setCookie('botao',1,1);changeLinkAddFriend();">Grupo de Pessoas #1</button>
+		<button id="bot_2" onClick="setCookie('botao',2,1);changeLinkAddFriend();">Grupo de Pessoas #2</button>		
+		<button id="bot_3" onClick="setCookie('botao',3,1);changeLinkAddFriend();">Grupo de Pessoas #3</button>		
+	</div>
+	<br>
+		<div id="black_stripe"></div>
+		
+		<div id="container">
+			<div id="ecra-edge"><div id="moving_ecra" class="">
+				<Marquee SCROLLAMOUNT="6" BEHAVIOR="SCROLL" DIRECTION="LEFT" style="top:0.08in;font-size:large;" id="texto_cima">Por favor aproxime os dois relógios</marquee>				
+				<img style="top:35%;height:50%;"onClick=";" class="img" id="img_central" alt="Escolha uma Categoria" src="./imagens/FriendsHub/giphy.gif"></img>
+								<!-- Popup Drones --> 				<div id="popup_drone" style="z-index:-50; "> 					<div style="height:15%;width:100%"> </div> 					<img style="height:40%;width:35%"onClick=";" id="popup_img_drone" alt="Escolha uma Categoria" src=""></img>                     <img style="" id="imagem_drone_way"src="./imagens/takeaway.png"></img> 					<div id="popup_confirm_drone" onClick="desaparecer_popup_drone()"> 						<button id="botao_ok" onClick="desaparecer_popup_drone()" type="button">Ok</button> 					</div> 				</div> 				<Marquee  style="z-Index:-1;font-size:small;width:100%;" id="popup_baixo_drone"	>cenas escritas </marquee>		 				<marquee style="z-Index:-1;" id="popup_cima_drone"> A encomenda chegou. Por favor siga as intruções no visor do drone</marquee>
+			</div></div>
+			<div id="real_image_lock"></div>
+			<div id="img_lock" onClick="goLock()"></div>
+			<div id="image_mais"></div>
+			<div id="but_mais" onClick="bigger()"></div>
+			<div id="image_menos"></div>
+			<div id="but_menos" onClick="smaller()"></div>
+			<div onClick="goUp()" onmousedown="goMainMenu()" id="back_button"></div>
+		</div>
+		
+		<div id="black_stripe"></div>
+	</center>
+	</TD>
+</body>
+</html>

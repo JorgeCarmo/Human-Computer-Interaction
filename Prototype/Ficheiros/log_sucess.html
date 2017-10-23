@@ -1,0 +1,41 @@
+<HTML HEIGHT="100%" style="background: white;">
+<head>
+	<link href="main_watch.css"      rel="stylesheet" type="text/css"> <link/>
+	<script src="_.js"></script>
+	<script src="cookie.js"></script>
+
+	<script src="drones.js"></script>
+	<script src="drone_popup.js"></script>
+	<link href="popup.css"      	rel="stylesheet" type="text/css"> <link/>	
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<BODY style="background: white;" onLoad="load_animation();dronesEverywhere()">
+<TABLE id="tabela" style="background: white;" Height="100%" WIDTH="100%" BORDER="0" > 
+	<TD >
+	<center>
+		<div id="black_stripe"></div>
+		
+		<div id="container">
+			
+			<div id="ecra-edge" onClick=""><div id="moving_ecra" class="">
+				<Marquee SCROLLAMOUNT="4" BEHAVIOR="SCROLL" DIRECTION="LEFT" style="margin-top: 5px;"id="texto_baixo">Conta adicionada</marquee>				
+				<img style="height:60%;width:60%" class="img" id="img_central" alt="Escolha uma Categoria" src="./imagens/Check.png"></img>
+				<button style="right:0.05in;bottom:0.05in;position:absolute;margin:0 auto;" onClick="setCookie('actual',0,1);faz_descer('main_menu_tut1.html');"> Ok</button>
+
+								<!-- Popup Drones --> 				<div id="popup_drone" style="z-index:-50; "> 					<div style="height:15%;width:100%"> </div> 					<img style="height:40%;width:35%"onClick=";" id="popup_img_drone" alt="Escolha uma Categoria" src=""></img>                     <img style="" id="imagem_drone_way"src="./imagens/takeaway.png"></img> 					<div id="popup_confirm_drone" onClick="desaparecer_popup_drone()"> 						<button id="botao_ok" onClick="desaparecer_popup_drone()" type="button">Ok</button> 					</div> 				</div> 				<Marquee  style="z-Index:-1;font-size:small;width:100%;" id="popup_baixo_drone"	>cenas escritas </marquee>		 				<marquee style="z-Index:-1;" id="popup_cima_drone"> A encomenda chegou. Por favor siga as intruções no visor do drone</marquee>
+			</div></div>
+			<div id="real_image_lock"></div>
+			<div id="img_lock" onClick="document.location = 'main_watch.html'"></div>
+			<div id="image_mais"></div>
+			<div id="but_mais" onClick="bigger()"></div>
+			<div id="image_menos"></div>
+			<div id="but_menos" onClick="smaller()"></div>
+			<div onClick="faz_descer('main_menu_tut1.html');" onmousedown="" id="back_button"></div>
+		</div>
+		
+		<div id="black_stripe"></div>
+	</center>
+	</TD>
+</body>
+</html>

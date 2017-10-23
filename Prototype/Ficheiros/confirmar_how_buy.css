@@ -1,0 +1,31 @@
+#botoes{
+position:absolute;
+bottom: 0.02in;
+}
+#botao1{
+}
+
+#botao2{
+}
+
+#Preco{
+	position:absolute;
+	bottom: 0.24in;
+	font-size: 11pt;
+	left:40%;
+}
+#img_confirm{
+	border-radius:100%;
+	margin-top:18%;
+	width: 50%;
+	height: 50%;
+}
+#texto_cima{
+	position:absolute;
+	font-size: small;
+	height: 15%;
+	width: 100%;
+	font-family: Trebuchet MS;
+	left:0;
+	color: black;
+}

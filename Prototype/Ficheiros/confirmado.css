@@ -1,0 +1,47 @@
+#texto_cima{
+		font-size:14;
+}
+
+
+#Preco{
+	position:absolute;
+	left:0;
+    width: 100%;
+    text-align: center;
+	bottom: 0.47in;
+	
+}
+
+#timer{
+
+	position: absolute;
+	top: 59%;
+	left: 0%;
+    width: 70%;
+    text-align: center;
+}
+
+#tempo{
+	position:absolute;
+	font-size: 14;
+	bottom: 0.13in;
+	left: 4%;
+}
+
+#texto_drone{
+    width: 100%;
+    text-align: center;
+    font-size: small;
+	position: absolute;
+	top: 57%;
+	left: 0%;
+
+}
+
+#prosseguir_confirmado{
+    bottom: 7px;
+    right: 0;
+    margin-right: 5px;
+    position: absolute;
+    height: 19%;
+}

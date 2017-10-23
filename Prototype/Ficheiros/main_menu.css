@@ -1,0 +1,33 @@
+.img_main{
+	height: 40%;
+	width: 40%;
+	position: absolute;
+}
+
+#img_store{
+	position: absolute;
+	top: 5%;
+	left: 5%;
+
+}
+
+#img_friends{
+	position: absolute;
+	top: 5%;
+	right: 5%;
+
+}
+
+#img_map{
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+}
+
+#img_agenda{
+	position: absolute;
+	bottom: 5%;
+	left: 5%;
+
+}
+

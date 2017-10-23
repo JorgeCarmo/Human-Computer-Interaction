@@ -1,0 +1,117 @@
+.img{
+	height: 30%;
+	width:10%;
+	position: absolute;
+	top: 35%;
+}
+#way_drone_img{
+    position:absolute;
+    bottom: 0;
+    right:0;
+    width: 30%;
+    height: 30%;
+    margin: 5px
+}
+#img_left{
+	left:98px;
+}
+#img_central{
+	left:0;
+	height: 100%;
+	width: 50%;
+	position: absolute;
+}
+#div_central{
+	
+	height: 50%;
+	width: 100%;
+	position: absolute;
+}
+#info_prod{
+	width: 70%;
+	/*border: 1px solid black;*/
+	position:absolute;
+	height:80%;
+	top: 20%;
+	left: 15%;
+    
+}
+#quant{
+	position:absolute;
+	font-size:x-small;
+	font-family: Trebuchet MS;
+	top:0;
+    left:60%;
+}
+#quant_txt{
+	position:absolute;
+    left: 3;
+	font-size:x-small;
+	font-family: Trebuchet MS;
+	top:0;
+	width:40%;
+	text-align:center;
+}
+#tot{
+	position:absolute;
+	font-size:x-small;
+	font-family: Trebuchet MS;
+	top:15px;
+	text-align:center;
+	width:100%;
+
+}
+#tot_txt{
+	position:absolute;
+	font-size:x-small;
+	font-family: Trebuchet MS;
+	top:28px;
+	text-align:center;
+	width:100%;	
+}
+#div_texto{
+	left:50%;
+	position:absolute;
+	top:0;
+	/*border: 1px solid green;*/
+	height:50%;
+	width:50%;
+}
+#loja_txt{
+	top:50%;
+	width:67%;
+	left:0;
+	position:absolute;
+	height:19px;
+	font-family: Trebuchet MS;
+}
+
+#time_miss_d{
+	position:absolute;
+	bottom:5%;
+	width:70%;
+	text-align: center;
+    left:0;
+}
+
+#texto_cima{
+	position:absolute;
+	/*border: 1px solid black;
+	/*font-size:;*/
+	height: 15%;
+	width: 75%;
+	font-family: Trebuchet MS;
+	left:0;
+	color: black;
+}
+
+#texto_baixo{
+	position:absolute;
+	height: 15%;
+	width: 100%;
+	font-size:small;
+	font-family: Trebuchet MS;
+	bottom:0.05in;
+	left:0;
+	color: black;
+}

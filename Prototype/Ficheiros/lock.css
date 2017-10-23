@@ -1,0 +1,70 @@
+/*---------------lock----------*/
+.texto_horas {
+	position: absolute;
+	top: 5%;
+	font-size: small;
+}
+
+#hour{
+	left: 5%;
+}
+
+#hour_h{
+	left: 18%;
+	
+}
+
+#minute{
+	left: 25%;
+}
+
+
+.drone {
+	visibility:hidden;
+}
+#drone_seg{
+	right: 5%;
+}
+#drone_min{
+	right: 25%;
+}
+#drone_h{
+	right: 20%;
+}
+
+
+
+#evento1{
+	position: absolute;
+	left: 0% !important;
+	top: 26%;
+	visibility: hidden;
+}
+
+#evento2{
+	position: absolute;
+	left: 23%;
+	top: 56%;
+	font-size: small;
+}
+
+#evento3{
+	position: absolute;
+	left: 37%;
+	top: 16%;
+	font-size: small;
+}
+
+#texto_unlock{
+
+	position: absolute;
+	top: 80%;
+	left: 0%;
+	color: blue;
+
+}
+#img_lock_drone{
+	
+
+}
+/*---------------FIM DO lock----------*/

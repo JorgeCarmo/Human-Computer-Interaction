@@ -1,0 +1,92 @@
+/*#texto_baixo{
+	position:absolute;
+	font-size: small;
+	height: 30%;
+	width: 50 %;
+	font-family: Trebuchet MS;
+	bottom:0.1in;
+	left:0;
+	color: black;
+	border: 2px solid black;
+	padding: 1px;
+	text-align:bottom;
+}
+*/
+#texto_baixo{
+	height: 20%;
+	width: 97%;
+	font-family: Trebuchet MS;
+	bottom:0.03in;
+	color: black;
+	left:1.5%;
+	font-size: 7pt;	
+	position:absolute;
+	/*
+	border: 2px solid black;
+	padding: 1px;
+	*/
+}
+#botao_baixo{
+    margin: 0 auto;
+	height: 20%;
+	width: 70%;
+    left:15%;
+	font-family: Trebuchet MS;
+	bottom:0.03in;
+	color: black;
+	font-size: 7pt;	
+	position:absolute;
+	/*
+	border: 2px solid black;
+	padding: 1px;
+	*/
+}
+#texto_cima{
+	
+	position:absolute;
+	font-size: small;
+	height: 15%;
+	width: 100%;
+	top:5px;
+	left:5%;
+	color: black;
+
+	
+}
+#quantidade{
+	border: 1px solid black;
+	width: 16%;
+	height:16%;
+	position: absolute;
+	top: 26%;
+	left:42%;
+	font-size: 7pt;
+
+}	
+
+#button_up{
+	position:absolute;
+	width: 16%;
+	height: 16%;
+	left:65%;
+	top: 27%;
+
+}
+#button_down{
+	position:absolute;
+	width: 16%;
+	height: 16%;
+	left:19%;
+	top:27%;
+}
+#preco{
+	top:50%;
+	position:absolute;
+	left: 0;
+    width: 100%;
+    text-align: center;
+	font-size: large;
+	font-family: Trebuchet MS;
+
+
+}

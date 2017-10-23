@@ -1,0 +1,113 @@
+<HTML HEIGHT="100%" style="background: white;">
+<head>
+	<link href="main_watch.css"      rel="stylesheet" type="text/css"> <link/>
+	<link href="main_menu.css"      	rel="stylesheet" type="text/css"> <link/>
+	<link href="popup.css"      	rel="stylesheet" type="text/css"> <link/>
+	<script src="main_menu.js"></script>
+	<script src="_.js"></script>
+	<script src="cookie.js"></script>
+	<script src="drones.js"></script>
+	<script src="drone_popup.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script>
+        function prev_tuturial(){
+            faz_esquerda("main_menu_tut3.html");
+        }
+        function next_tuturial(){
+            faz_direita("main_menu_tut5.html");
+        }
+    </script>
+    <style>
+        .cheio{
+            background: black;
+            opacity: 0.8;
+            width:50%;
+            height:50%;
+            position: absolute;
+        }
+        .vazio{
+            width:50%;
+            height:50%;
+            border-bottom-right-radius: 60%;
+            position: absolute;
+        }
+    </style>
+</head>
+<BODY style="background: white;" onLoad="load_tuturial();dronesEverywhere();setCookie('mapa_imagem','',1);check_botoes()">
+<TABLE id="tabela" style="background: white;" Height="100%" WIDTH="100%" BORDER="0" > 
+	<TD >
+
+	<center>
+		<div id="black_stripe"></div>
+		
+		<div id="container">
+			<div id="ecra-edge"><div id="moving_ecra" class="">
+				<div id="popup" style="z-index:-1;">
+									<div style="height:15%;width:100%"> </div>
+									<img style="height:40%;width:40%"onClick=";" class="img" id="popup_img" alt="Escolha uma Categoria" src=""></img>
+									<div style="font-size:small;"> Aceitar? </div>
+									<div id="popup_confirm">
+										<button id="botao_n" onClick="botao_n()" type="button">Não</button>
+										<button id="botao_y" onClick="botao_y()" type="button">Sim</button>
+									</div>
+				</div>
+				<Marquee  	style="z-Index:-1;" id="popup_cima">cenas escritas </marquee>				
+				<table>
+					<tr> <!---->
+						<td><img class="img_main" id="img_store" src="./imagens/Main/store.png" onclick="var zero = 0;setCookie('actual',zero,1);faz_descer('type_of_buy.html');"></img>	</td>
+						<td><img class="img_main" id="img_friends"src="./imagens/Main/friends.png" onclick="faz_descer('friendsHub.html')"></img>	</td>
+					</tr>
+		
+					<tr>
+						<td><img class="img_main" id="img_agenda" src="./imagens/Main/agenda.png" onclick="faz_descer('agenda.html')"></img>	</td>
+						<td><img class="img_main" id="img_map" src="./imagens/Main/map.png" onclick="setCookie('pagina de voltar atras','main_menu.html',1);faz_descer('mapa.html')"></img>	</td>
+					</tr>
+				</table>
+				<!-- Popup Drones --> 				<div id="popup_drone" style="z-index:-50; "> 					<div style="height:15%;width:100%"> </div> 					<img style="height:40%;width:35%"onClick=";" id="popup_img_drone" alt="Escolha uma Categoria" src=""></img>                     <img style="" id="imagem_drone_way"src="./imagens/takeaway.png"></img> 					<div id="popup_confirm_drone" onClick="desaparecer_popup_drone()"> 						<button id="botao_ok" onClick="desaparecer_popup_drone()" type="button">Ok</button> 					</div> 				</div> 				<Marquee  style="z-Index:-1;font-size:small;width:100%;" id="popup_baixo_drone"	>cenas escritas </marquee>		 				<marquee style="z-Index:-1;" id="popup_cima_drone"> A encomenda chegou. Por favor siga as intruções no visor do drone</marquee>
+                <!-- Devanecer -->
+ 
+                <div id="" style="width:100%;height:100%;position:absolute;top:0;" >
+                    <div class="cheio" style="top:0;left:0;"></div>
+                    <div class="cheio" style="top:0;right:0;"></div>
+                    <div class="vazio" style="bottom:0;left:0;"></div>
+                    <div class="cheio" style="bottom:0;right:0;"></div>
+                </div>
+                <div id="onde_escrevemos" class="">
+                    <div id="tapa_buraco_entrada" style="background:black;opacity:0.8;width:50%;height:50%;bottom:0;left:-100%;position:absolute;"></div>
+                    <div id="tapa_buraco_saida"   style="background:black;opacity:0.8;width:50%;height:50%;bottom:0;left:100%;position:absolute;"></div>
+                    <div style="top:6%;width:100%;text-align:center;font-size:small;position:absolute;">Toque Para</div>
+                    <div style="top:20%;right:60%;font-size:small;position:absolute;text-align:left;"></div>
+                    <div style="position:absolute;width:100%;text-align:center;top:25%;font-size:meddium; font-color:white;opacity:1">Ver Agenda</div>
+                    <div style="top:50%;left:8%;position:absolute;text-align:center;"></div>
+                    <!--<img id="arrow" src="./imagens/arrow.png" style="left:5%;top:20%;position:absolute;height:20%;width:30%;"></img>-->
+                    <div style="top:60%;left:10%;position:absolute;text-align:center;"> </div>
+                    <img onClick="next_tuturial()" src="imagens/right-arrow.png" style="z-index:5;position:absolute;bottom:5;right:5;width:27;height:20">  </img>
+                </div>
+
+                
+			</div></div>
+			<div id="real_image_lock"></div>
+			<div id="img_lock" onClick="goLock()"></div>
+			<div id="image_mais"></div>
+			<div id="but_mais" ></div>
+			<div id="image_menos"></div>
+			<div id="but_menos"></div>
+			<div onclick="prev_tuturial()" onmousedown="_('back_button').style.border = '2px solid grey';" onmouseup="_('back_button').style.border = '2px solid white';" id="back_button"></div>
+		</div>
+		
+		<div id="black_stripe"></div>
+	</center>
+	</TD>
+</body>
+</html>
+	
+	
+	
+	
+<!--
+	
+	<div style="display:table;text-align:center">
+			<div style="display:table-cell;text-align:center">
+				<iframe style="position: absolute; height:1.06in; width:1.06in;vertical-align:middle;background:green;z-index:1;"></iframe>
+				<div style="position: absolute;Display:table-cell; height:3in; width:3in;vertical-align:middle;background:black;">a</div>
+		</div>

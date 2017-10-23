@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#container{
+
+	left: 45%;
+	position:relative;
+	width:1.06in;
+	height:1.06in;
+	border: 1px solid black;
+	overflow: hidden;
+}
+
+#shit{
+	position:absolute;
+	width:100%;
+	height:45%;
+	background:none;
+
+}
+#big{
+	position:absolute;
+	width:100%;
+	top: 45%;
+	background:none;
+}
+
+#div1 {
+    width: 40px;
+    height: 40px;
+    background: green;
+    position: absolute;
+	left:-20px;
+	top: 30px;
+
+	-webkit-animation: mymoveleft 2s infinite;
+	animation: mymoveleft  2s infinite ;
+
+}
+#div2 {
+	top:20px;
+	left:25px;
+    width: 50px;
+    height: 60px;
+    background: blue;
+    position: absolute;
+
+	-webkit-animation: mymovecenter 2s infinite;
+	animation: mymovecenter 2s infinite ;
+
+}
+#div3 {
+    width: 40px;
+    height: 40px;
+    background: red;
+    position: absolute;
+	right:-20px;
+	top: 30px;
+	
+
+	-webkit-animation: mymoveright 2s infinite;
+	animation: mymoveright 2s infinite ;
+}
+#div4 {
+    width: 40px;
+    height: 40px;
+    background: orange;
+    position: absolute;
+	left:-65;
+	top: 30px;
+	
+
+	-webkit-animation: mymovehiddenleft 2s infinite;
+	animation: mymovehiddenleft 2s infinite ;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymovehiddenleft {
+    from {left: -65px;}
+    to   {left: -20px;}
+}
+
+@keyframes mymovehiddenleft {
+    from {left: -65px;}
+    to   {left: -20px;}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymoveright {
+    from {right: -20px;}
+    to   {right: -65px;}
+}
+
+@keyframes mymoveright {
+    from {right: -20px;}
+    to   {right: -65px;}
+}
+ 
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymovecenter {
+    from {left:  25px;top: 20px;width: 50px; height: 60px;}
+    to   {left:  80px;top: 30px;width: 40px; height: 40px;}
+}
+
+@keyframes mymovecenter {
+    from {left:  25px;top: 20px;width: 50px; height: 60px;}
+    to   {left:  80px;top: 30px;width: 40px; height: 40px;}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymoveleft {
+    from {left: -20px;top: 30px;width: 40px; height: 40px;}
+    to   {left:  25px;top: 20px;width: 50px; height: 60px;}
+}
+
+@keyframes mymoveleft {
+    from {left: -20px;top: 30px;width: 40px; height: 40px;}
+    to   {left:  25px;top: 20px;width: 50px; height: 60px;}
+}
+
+
+</style>
+</head>
+<body>
+
+<p><strong>Note:</strong> The animation property is not supported in Internet Explorer 9 and earlier versions.</p>
+<div id="shit">a</div>
+<div id="big">
+	<div id="container">
+		<div id="div4"></div>
+		<div id="div1"></div>
+		<div id="div2"></div>
+		<div id="div3"></div>
+	</div>
+</div>
+
+</body>
+</html>

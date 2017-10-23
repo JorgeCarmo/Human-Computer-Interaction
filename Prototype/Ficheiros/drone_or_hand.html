@@ -1,0 +1,53 @@
+    <HTML HEIGHT="100%" style="background: white;">
+<head>
+	<link href="main_watch.css"      rel="stylesheet" type="text/css"> <link/>
+	<link href="lojas.css"      	rel="stylesheet" type="text/css"> <link/>
+	<link href="escolhas.css"      	rel="stylesheet" type="text/css"> <link/>
+	<script src="_.js"></script>
+	<script src="cookie.js"></script>
+	<script src="drones.js"></script>
+	<script src="drone_popup.js"></script>
+	<link href="popup.css"      	rel="stylesheet" type="text/css"> <link/>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<BODY style="background: white;" onLoad="load_animation();dronesEverywhere()">
+	<TABLE id="tabela" style="background: white;" Height="100%" WIDTH="100%" BORDER="0" > 
+	<TD > 
+
+	<center>
+		<div id="black_stripe"></div>
+		
+		<div id="container">
+			<div id="ecra-edge"><div id="moving_ecra" class="">
+				<marquee id="texto_cima">Como quer receber a sua compra?</marquee>	
+				<!-- add_drone(getCookie('actual_'+'imagem'),getCookie('actual_'+'nome'),getCookie('actual_'+'quantidade'),getCookie('actual_'+'preco'),getCookie('actual_'+'loja'),'',getCookie('actual_'+'tipo'),'');document.location='confirmado.html' -->
+				<div id ="escolha_esquerda" onclick="setCookie('confirm_image','./imagens/drone.gif',1);setCookie('from','drone_or_hand.html',1);setCookie('where2','confirmado.html',1);setCookie('confirm_txt','Receber de drone?',1);setCookie('way','./imagens/drone.gif',1);faz_descer('confirmar_how_buy.html');">
+					<img id="img_choose" src="./imagens/drone.gif">
+					<div id="texto_choose">Drone</div>
+				</div>
+				<!---->
+				<div id ="escolha_direita" onclick="setCookie('confirm_image','./imagens/takeaway.png',1);setCookie('from','drone_or_hand.html',1);setCookie('where2','how_to_pay.html',1);setCookie('confirm_txt','Levantar na Loja?',1);setCookie('way','',1);faz_descer('confirmar_how_buy.html')">
+					<img id="img_choose" src="./imagens/takeaway.png">
+					<marquee id="texto_choose"> Levantar na Loja </marquee>
+				</div>
+				<!--<img class="img" id="img_left" src="./imagens/Pizza Hut/Pizza_Hut_logo.png"></img>
+				<img onClick="changeLinkLoja()" class="img" id="img_central" src="./imagens/McDonnald's/McDonalds_logo.png"></img>
+				<img class="img" id="img_right" src="./imagens/McDonnald's/McDonalds_logo.png"></img>-->
+						
+
+
+								<!-- Popup Drones --> 				<div id="popup_drone" style="z-index:-50; "> 					<div style="height:15%;width:100%"> </div> 					<img style="height:40%;width:35%"onClick=";" id="popup_img_drone" alt="Escolha uma Categoria" src=""></img>                     <img style="" id="imagem_drone_way"src="./imagens/takeaway.png"></img> 					<div id="popup_confirm_drone" onClick="desaparecer_popup_drone()"> 						<button id="botao_ok" onClick="desaparecer_popup_drone()" type="button">Ok</button> 					</div> 				</div> 				<Marquee  style="z-Index:-1;font-size:small;width:100%;" id="popup_baixo_drone"	>cenas escritas </marquee>		 				<marquee style="z-Index:-1;" id="popup_cima_drone"> A encomenda chegou. Por favor siga as intruções no visor do drone</marquee>
+			</div></div>
+			<div id="real_image_lock"></div>
+			<div id="img_lock" onClick="goLock()"></div>
+			<div id="image_mais"></div>
+			<div id="but_mais" onClick="bigger()"></div>
+			<div id="image_menos"></div>
+			<div id="but_menos" onClick="smaller()"></div>
+			<div onClick="faz_subir('produto.html')" onmousedown="goMainMenu()" id="back_button"></div>
+		</div>
+		
+		<div id="black_stripe"></div>
+	</center>
+	</TD> 	

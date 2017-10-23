@@ -1,0 +1,180 @@
+	.pop_out{
+		-webkit-animation: popout 1s;
+				animation: popout 1s;
+	 animation-fill-mode: forwards; 
+	 -webkit-animation-fill-mode: forwards; 
+	}
+	/* Chrome, Safari, Opera */
+	@-webkit-keyframes popout {
+		from {width: 1px;height: 1px;}
+		to   {width: 100%;height: 100%;left:0;top:0}
+	}
+
+	@keyframes popout {
+		from {width: 1px;height: 1px;}
+		to   {width: 100%;height: 100%;left:0;top:0}
+	}
+#popup{
+	border:1px solid black;
+	width:1px;
+	height:1px;
+	top: 50%;
+	left:50%;
+	transform: 	translateXY(-50%);
+	position:absolute;
+	background:white;
+	z-index: 99;
+}	
+#popup_drone{
+	border:1px solid black;
+	width:1px;
+	height:1px;
+	top: 50%;
+	left:50%;
+	transform: 	translateXY(-50%);
+	position:absolute;
+	background:white;
+	z-index: 99;
+}	
+#popup_friend{
+	border:1px solid black;
+	width:1px;
+	height:1px;
+	top: 50%;
+	left:50%;
+	transform: 	translateXY(-50%);
+	position:absolute;
+	background:white;
+	z-index: 99;
+}	
+#popup_cima{
+	width:100%;
+	height: 15%;
+	font-family: Trebuchet MS;
+	position: absolute;
+	font-size: small;	
+	margin: 0 auto 0 auto;
+	left:0;
+	top:0px;
+	/*top:-102px; /* o popup depois empurra para baixo */
+	}
+#popup_cima_drone{
+	width:100%;
+	height: 15%;
+	font-family: Trebuchet MS;
+	position: absolute;
+	font-size: small;	
+	margin: 1 auto 0 auto;
+	left:0;
+	top:0px;
+	/*top:-102px; /* o popup depois empurra para baixo */
+	}
+#popup_cima_friend{
+	width:100%;
+	height: 15%;
+	font-family: Trebuchet MS;
+	position: absolute;
+	font-size: small;	
+	margin: 4 auto 0 auto;
+	left:0;
+	top:0px;
+	/*top:-102px; /* o popup depois empurra para baixo */
+	}
+#popup_baixo_drone{
+	width:100%;
+	height: 15%;
+	font-family: Trebuchet MS;
+	position: absolute;
+	font-size: small;	
+	margin: 2 auto 0 auto;
+	left:0;
+	top:57px;
+	
+	/*top:-102px; /* o popup depois empurra para baixo */
+}
+#popup_img{
+	margin: 5px 5px 0px 5px;
+}
+#popup_img_drone{
+	margin: 4px 5px 0px 5px;
+	top: 15px;
+	left:10px;
+    position: absolute;
+}
+#popup_img_friend{
+	margin: 5px 5px 0px 5px;
+	top: 12px;
+	left:27px
+}
+#imagem_drone_way{
+    height:30%;
+    width:30%;
+    border-radius:0%;
+    position:absolute;
+    top:25px;
+    left:60px;
+    
+}
+#popup_confirm{
+	visibility:hidden;
+	width:100%;
+	height:15%;
+}
+#popup_confirm_drone{
+	position: absolute;
+	visibility:hidden;
+	width:100%;
+	height:15%;
+	bottom:12px;
+}
+#popup_confirm_friend{
+	position: absolute;
+	visibility:hidden;
+	width:100%;
+	height:25%;
+	bottom:0px;
+}
+#botao_ok{
+	width:40%;
+}
+#botao_ok_friend{
+    height:21px;
+	width:40%;
+    right: 5;
+    bottom: 5;
+    position:absolute;
+}/*
+#botao_y{
+	position:relative;
+	top:0;
+	left: 10px;
+	width:40%;
+	height:100%;
+	font-size:100%;
+	padding:2px;
+	margin:0;
+	border:1px solid black;
+}
+#botao_n{
+	position:relative;
+	top:0;
+	right: 10px;
+	width:40%;
+	height:100%;
+	font-size:100%;
+	padding:2px;
+	margin:0;
+	border:1px solid black;
+}*/
+
+#popup_baixo{
+	width:100%;
+	height: 15%;
+	font-family: Trebuchet MS;
+	position: absolute;
+	font-size: small;	
+	margin: 0 auto 0 auto;
+	left:0;
+	bottom:0px;
+	/*top:-102px; /* o popup depois empurra para baixo */
+	}

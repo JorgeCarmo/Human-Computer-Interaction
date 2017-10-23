@@ -1,0 +1,115 @@
+<HTML HEIGHT="100%" style="background: white;">
+<head>
+	<link href="main_watch.css"      rel="stylesheet" type="text/css"> <link/>
+	<link href="avatar.css"      	rel="stylesheet" type="text/css"> <link/>
+	
+	<script src="_.js"></script>
+	<script src="cookie.js"></script>
+	<script src="avatar_diff.js"></script>
+	<link rel="stylesheet" href="owl-swipe/owl.carousel.min.css">
+	<link rel="stylesheet" href="owl-swipe/owl.theme.default.min.css">
+	
+	<script src="drones.js"></script>
+	<script src="drone_popup.js"></script>
+	<link href="popup.css"      	rel="stylesheet" type="text/css"> <link/>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<BODY style="background: white;" onLoad="load_animation();onLoadFriendsHub();dronesEverywhere();">
+<TABLE id="tabela" style="background: white;" Height="100%" WIDTH="100%" BORDER="0" > 
+	<TD >	
+	<center>
+		<div id="black_stripe"></div>
+		
+		<div id="container">
+			
+			<div id="ecra-edge"><div id="moving_ecra" class="">
+				<Marquee SCROLLAMOUNT="4" BEHAVIOR="SCROLL" DIRECTION="LEFT" SPEED="80" id="texto_cima">Escolher Avatar</marquee>
+					<div class="owl-carousel">
+						<div> <img onmousedown="foi_abaixo(event)" onmouseup="foi_acima(event)" onClick="changeLinkTipoAvatarHomem(9)"  id="img_swipe" src="./imagens/Avatar/diff9.png"></img></div>
+						<div> <img onmousedown="foi_abaixo(event)" onmouseup="foi_acima(event)" onClick="changeLinkTipoAvatarHomem(1)"  id="img_swipe" src="./imagens/Avatar/diff1.png"></img> </div>
+						<div> <img onmousedown="foi_abaixo(event)" onmouseup="foi_acima(event)" onClick="changeLinkTipoAvatarHomem(2)"  id="img_swipe" src="./imagens/Avatar/diff2.png"></img> </div>
+						<div> <img onmousedown="foi_abaixo(event)" onmouseup="foi_acima(event)" onClick="changeLinkTipoAvatarHomem(3)"  id="img_swipe" src="./imagens/Avatar/diff3.png"></img> </div>
+						<div> <img onmousedown="foi_abaixo(event)" onmouseup="foi_acima(event)" onClick="changeLinkTipoAvatarHomem(4)"  id="img_swipe" src="./imagens/Avatar/diff4.png"></img> </div>
+						<div> <img onmousedown="foi_abaixo(event)" onmouseup="foi_acima(event)" onClick="changeLinkTipoAvatarHomem(5)"  id="img_swipe" src="./imagens/Avatar/diff5.png"></img> </div>
+						<div> <img onmousedown="foi_abaixo(event)" onmouseup="foi_acima(event)" onClick="changeLinkTipoAvatarHomem(6)"  id="img_swipe" src="./imagens/Avatar/diff6.png"></img> </div>
+						<div> <img onmousedown="foi_abaixo(event)" onmouseup="foi_acima(event)" onClick="changeLinkTipoAvatarHomem(7)"  id="img_swipe" src="./imagens/Avatar/diff7.png"></img> </div>
+						<div> <img onmousedown="foi_abaixo(event)" onmouseup="foi_acima(event)" onClick="changeLinkTipoAvatarHomem(8)"  id="img_swipe" src="./imagens/Avatar/diff8.png"></img> </div>
+       
+						
+					</div>
+                <!-- Popup Amigo Aceite -->				
+				<div id="popup_friend" style="z-index:-50; ">
+					<div style="height:15%;width:100%"> </div>
+					<img style="height:55%;width:50%"onClick=";"  id="popup_img_friend" alt="Escolha uma Categoria" src=""></img>
+					<div id="popup_confirm_friend" onClick="desaparecer_popup_friend()">
+						<button id="botao_ok_friend" onClick="desaparecer_popup_friend()" type="button">Ok</button>
+					</div>
+				</div>
+				<marquee style="z-Index:-1;" id="popup_cima_friend"> Pedido de Amizade aceite</marquee>
+				
+				<!-- Popup Drones -->
+				<div id="popup_drone" style="z-index:-50; ">
+					<div style="height:15%;width:100%"> </div>
+					<img style="height:40%;width:35%"onClick=";" id="popup_img_drone" alt="Escolha uma Categoria" src=""></img>
+					<img style="" id="imagem_drone_way"src="./imagens/takeaway.png"></img>
+					<div id="popup_confirm_drone" onClick="desaparecer_popup_drone()">
+						<button id="botao_ok" onClick="desaparecer_popup_drone()" type="button">Ok</button>
+					</div>
+				</div> 				
+				<Marquee  style="z-Index:-1;font-size:small;width:100%;" id="popup_baixo_drone"	>cenas escritas </marquee>
+				<marquee style="z-Index:-1;" id="popup_cima_drone"> A encomenda chegou. Por favor siga as intruções no visor do drone</marquee>
+				<Marquee  style="z-Index:-1;font-size:small;width:100%;" id="popup_baixo_drone"	>cenas escritas </marquee>		
+				<marquee style="z-Index:-1;" id="popup_cima_drone"> A encomenda chegou. Por favor siga as intruções no visor do drone</marquee>
+			</div></div>
+			<div id="real_image_lock"></div>
+			<div id="img_lock" onClick="goLock()"></div>
+			<div id="image_mais"></div>
+			<div id="but_mais" onClick="bigger()"></div>
+			<div id="image_menos"></div>
+			<div id="but_menos" onClick="smaller()"></div>
+			<div onClick="goUp()" onmousedown="goMainMenu()" id="back_button"></div>
+		</div>
+		
+		<div id="black_stripe"></div>
+	</center>
+	</TD>
+	
+<script src="jquery.min.js"></script>
+<script src="owl-swipe/owl.carousel.js"></script>
+	
+	
+		<script type="text/javascript">
+				$('.owl-carousel').on('initialized.owl.carousel', function(f){
+					$('.owl-carousel').trigger('to.owl.carousel', [1, 0, true]);
+					
+				});		
+				$('.owl-carousel').on('refreshed.owl.carousel', function(f){
+					$('.owl-carousel').trigger('to.owl.carousel', [1, 0, true]);
+					
+				});		
+			 
+              $('.owl-carousel').owlCarousel({
+                center: true,
+                items: 1,
+                loop: true,
+                dots: false,
+                nav: false,
+                stagePadding: 20
+              });
+              $('.owl-carousel').on('translate.owl.carousel', function(e){
+					idx = e.item.index;
+					$('.owl-item.big').removeClass('big');
+					$('.owl-item.medium').removeClass('medium');
+					$('.owl-item').eq(idx).addClass('big');
+					$('.owl-item').eq(idx-1).addClass('medium');
+					$('.owl-item').eq(idx+1).addClass('medium');
+				});
+
+				
+	</script>
+
+	
+	
+</body>
+</html>

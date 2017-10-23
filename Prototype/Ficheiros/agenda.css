@@ -1,0 +1,170 @@
+.img{
+	height: 15%;
+	width: 15%;
+	position: relative;
+	left:40%;
+	top:17%;
+}
+
+
+#img_left{
+	left:91.5;
+
+}
+#img_central{
+	position: absolute;
+	top: 22%;
+	height: 60%;
+	width: 50%;
+	left: 22% !important;
+
+}
+
+#img_central2{
+	top: 0%;
+	height: 50% !important;
+	width: 50% !important;
+	position: relative;
+	left: 0% !important;
+	top:32%;
+
+}
+#img_right{
+	
+	right:89;
+}
+
+#ecra-edge{
+	overflow:hidden;
+}
+#texto_cima{
+	position:absolute;
+	font-size: 14;
+	height: 15%;
+	width: 100%;
+	font-family: Trebuchet MS;
+	top:0%;
+	left:0;
+	color: black;
+}
+#texto_cima2{
+	position:absolute;
+	font-size: 14;
+	height: 15%;
+	width: 100%;
+	font-family: Trebuchet MS;
+	top:0%;
+	left:0;
+	color: black;
+}
+#texto_cima3{
+	position:absolute;
+	font-size: 14;
+	height: 15%;
+	width: 100%;
+	font-family: Trebuchet MS;
+	top:15%;
+	left:0;
+	color: black;
+}
+
+
+#actimg {
+	height: 50%;
+
+
+}
+
+#h {
+	position: absolute;
+	top: 92% !important;
+	font-size:12;
+
+}
+
+#h2 {
+	position: absolute;
+	font-size:12;
+	top:63%;
+}
+
+#act_img {
+	position:relative;
+	top: -15% !important;
+
+}
+
+#rem_img {
+	width: 25% !important;
+	top: -4%;
+	z-index: 99;
+}
+
+#rem_img2{
+
+	position: relative;
+	width: 35%;
+	left: 27%;
+	top: 32% !important;
+	-moz-transform:scale(1.20);
+	-ms-transform:scale(1.2);
+	-o-transform:scale(1.20);
+	-webkit-transform:scale(1.20);
+	transform:scale(1.20);
+}
+
+
+#texto_baixo{
+	position:absolute;
+	font-size:small;
+	height: 15%;
+	width: 100%;
+	font-family: Trebuchet MS;
+	bottom:0.05in;
+	left:0;
+	color: black;
+}
+#texto_baixo2{
+	position:absolute;
+	font-size:small;
+	height: 15%;
+	width: 100%;
+	font-family: Trebuchet MS;
+	bottom:-12%;
+	left:0;
+	color: black;
+}
+
+#botao1{
+	position:relative;
+	top: 0.37in;
+	color: red;
+	left:23%;
+	z-index:99
+}
+#botao2{
+	position:relative;
+	top: 0.61in;
+	left:-44%;
+	color: green;
+	z-index:99
+}
+
+.owl-carousel .owl-item.medium {
+	-moz-transform:scale(0.80);
+	-ms-transform:scale(0.80);
+	-o-transform:scale(0.80);
+	-webkit-transform:scale(0.80);
+	transform:scale(0.80);
+}
+
+.owl-carousel .owl-stage{
+	height: 102px !important
+
+}
+
+.owl-carousel .owl-item{
+	top: 25px !important;
+	width: 15%; 
+
+}

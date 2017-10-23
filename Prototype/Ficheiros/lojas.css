@@ -1,0 +1,88 @@
+.img{
+	height: 30%;
+	width:30%;
+	position: absolute;
+	top: 35%;
+}
+
+#img_left{
+	left:91.5;
+	clip: rect(0px,10.1667px,200px,0px);
+}
+#img_central{
+	top: 20%;
+	height: 60%;
+	width: 50%;
+	position: relative;
+
+}
+#img_right{
+	clip: rect(0px,60px,200px,18px);
+	right:89;
+}
+
+#img_swipe{
+	top: 20%;
+	height: 50%;
+	width: 70%;
+	position: relative;
+
+}
+
+#texto_cima{
+	position:absolute;
+	font-size: small;
+	height: 15%;
+	width: 100%;
+	font-family: Trebuchet MS;
+	top:3px;
+	left:0;
+	color: black;
+}
+
+#texto_baixo{
+	position:relative;
+	font-size:small;
+	height: 15%;
+	width: 100%;
+	font-family: Trebuchet MS;
+	bottom:0.05in;
+	left:0;
+	color: black;
+}
+
+#texto_marquee{
+	position:relative;
+	font-family: Trebuchet MS;
+	bottom:-0.28in;
+	width: 102px;
+	left: -33%
+}
+
+.owl-carousel .owl-item.medium #texto_marquee{
+
+display:none !important
+
+}
+
+.owl-carousel .owl-item.big #texto_marquee{
+
+visibility: initial !important
+
+}
+
+.owl-carousel .owl-item.medium {
+-moz-transform:scale(0.80);
+-ms-transform:scale(0.80);
+-o-transform:scale(0.80);
+-webkit-transform:scale(0.80);
+transform:scale(0.80);
+
+}
+
+
+
+.owl-carousel .owl-stage{
+height: 105px !important
+
+}

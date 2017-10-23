@@ -1,0 +1,42 @@
+	
+	Bom dia.
+
+	Browser - Mozilla Firefox.
+	Durante toda a simulação é considerado o rato como sendo um dedo.
+
+
+	Para abrir o projecto -> index.html
+							Ligar o relogio no botao superior direito (vermelho)
+							Desbloquear premindo o rato e arrastando o rato para um dos lados (ação de Swipe)
+							
+	Irá automaticamente abrir um tutorial seguido do setup inicial do relógio
+			- É possivel saltar todo o tuturial e setup indo para a página '.../main_menu.html'
+	
+	Durante o setup do metodo de pagamento:
+		- Opçao Loja -> Nenhum método fica associado
+		- Outras opções funciona qualquer combinação de email / password, desde que escolhido "log in processado com sucesso" (botao verde)
+			
+	
+	No menu principal existem dois botões no canto superior esquerdo que simulam o utilizador receber um pedido de amizade (se aceite o botao desaparece).
+
+	
+	Ao tentar adicionar amigos será pedido ao professor para escolher qual grupo de pessoas(botões)
+		- Cada grupo tem 4 pessoas diferentes e é sempre possivel clicar em qualquer um dos botões
+		- Os grupos  representam as pessoas que estão num raio de 10metros (apresentadas por ordem de distância)
+		
+		- O pedido é automaticamente aceite na segunda vez que o professor estiver no ecra principal dos amigos ('friendsHub.html')
+		
+		
+	Caso seja pressionado o botão de lock (superior direito) o ecra do relógio desliga-se, após novo toque este liga-se aparecendo o ecra de desbloqueio. Após ser desbloqueado volta à pagina em que estava
+		- O ecra de desbloqueio inclui:
+			- Horas actuais (canto superior esquerdo)
+			- Quanto tempo para chegada do próximo drone (canto superior direito)
+			- Próxima actividade adicionada ao centro
+		
+		- Existem três botoes no canto superior esquerdo para definir se estamos no primeiro, segundo ou terceiro dia do festival (alteram a actividade a ser mostrada)
+	
+	
+	Após a compra de algum objecto passado 5 minutos uma mensagem de aviso será mostrada em qualquer que seja o ecra que o utilizador esteja (excepto o de bloqueio)
+	
+	
+	Se por alguma razão se quiser fazer o reset aos dados do relógio (drones, amigos, acctividades) basta reaceder ao index.html

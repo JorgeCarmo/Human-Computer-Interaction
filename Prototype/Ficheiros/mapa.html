@@ -1,0 +1,154 @@
+<HTML HEIGHT="100%" style="background: white;">
+<head>
+	<link href="main_watch.css"      rel="stylesheet" type="text/css"> <link/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="_.js"></script>
+	<script src="cookie.js"></script>
+	<script src="mapa.js"></script>
+	
+	<script src="drones.js"></script>
+	<script src="drone_popup.js"></script>
+	<link href="popup.css"      	rel="stylesheet" type="text/css"> <link/>
+
+	<style>
+		@-webkit-keyframes blink {
+			0% {
+				opacity: 1;
+			}
+			49% {					
+				opacity: 1;
+			}
+			50% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 0;
+			}
+		}
+		@-moz-keyframes blink {
+			0% {
+				opacity: 1;
+			}
+			49% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 0;
+			}
+		}
+		@-o-keyframes blink {
+			0% {
+				opacity: 1;
+			}
+			49% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 0;
+			}
+		}
+		.blinking {
+			-webkit-animation: blink 0.5s;
+			-webkit-animation-iteration-count: infinite;
+			-moz-animation: blink 0.5s;
+			-moz-animation-iteration-count: infinite;
+			-o-animation: blink 0.5s;
+			-o-animation-iteration-count: infinite;
+		}
+
+			.butao{
+				padding: 20px;	
+				font-size: medium;
+				font-family: Trebuchet MS;
+			}
+			
+			.animacao_in{
+			    -webkit-animation: fadein 0.4s; /* Safari, Chrome and Opera > 12.1 */
+				   -moz-animation: fadein 0.4s; /* Firefox < 16 */
+					-ms-animation: fadein 0.4s; /* Internet Explorer */
+				animation-fill-mode: forwards; 
+			    animation-iteration-count: 2;
+				animation-direction: alternate;
+				-webkit-animation-fill-mode: forwards; 
+				-webkit-animation-iteration-count: 2; /* Chrome, Safari, Opera */
+				-webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+			}
+
+			@keyframes fadein {
+				from{opacity:0}
+				to{opacity:0.8}
+				
+			}
+
+			/* Firefox < 16 */
+			@-moz-keyframes fadein {
+				from{opacity:0}
+				to{opacity:0.8}
+				
+			}
+
+			/* Safari, Chrome and Opera > 12.1 */
+			@-webkit-keyframes fadein {
+				from{opacity:0}
+				to{opacity:0.8}
+				
+			}
+
+	</style>
+</head>
+<BODY onLoad="load_animation();dronesEverywhere();onLoad_mapa();" style="background: white;">
+<TABLE id="tabela" style="background: white;" Height="100%" WIDTH="100%" BORDER="0" > 
+	<TD>
+<!--	<span>width</span> <span id = "cwid"> 20</span><br>
+	<span>height</span><span id = "chei"> 20</span><br>
+	<span>left</span>  <span id = "clef"> 20</span><br>
+	<span>top</span>   <span id = "ctop"> 20</span><br>
+	<div style="position: fixed; top:45%;left:20%">
+		<button class="butao" onclick="criaDrones()" style="position:absolute; top:-150px; left:75px" >+</button>
+		
+	</div>-->
+	<center>
+		<div id="black_stripe"></div>	
+		<div id="container">
+			<div id="ecra-edge" onmousedown="rato_down(event)" onmouseout="rato_up()" onmouseup="rato_up()" onmousemove="move_map(event)" ondragstart="return false;" >
+                <div id="moving_ecra" class="">
+                <img id="innerdiv" style="position: absolute;left: -50px;top:  -50px;" src="./imagens/fundo.jpg" WIDTH="200px" height="200px" ondragstart="return false;"></img>
+				<img class="imagens_mapa blinking" id="red_circle"src="./imagens/red_circle.png" style="position: absolute; left: 20px; top: 8px; height: 10px; width: 10px;">a</img></blink>
+				<img onclick="setCookie('loja', 'Pizza Hut', 1);setCookie('actual_loja', 'Pizza Hut', 1);faz_descer('mapa_type_of_buy.html')" class="imagens_mapa" id="pizza_hut_icon" src="./imagens/Pizza Hut/Pizza_Hut_logo.png" style="position: absolute; left: 7px; top: 70px; height: 12px; width: 12px;"></img>
+				<img onclick="setCookie('loja', McDonnald\'s, 1);setCookie('actual_loja', McDonnald\'s, 1);faz_descer('mapa_type_of_buy.html')" class="imagens_mapa" id="macdonalds_icon" src="./imagens/McDonnald's/McDonalds_logo.png" style="position: absolute; left: -16px; top: 28px; height: 12px; width: 12px;"></img>
+				<img onclick="setCookie('loja', 'Pans & Company', 1);setCookie('actual_loja', 'Pans & Company', 1);faz_descer('mapa_type_of_buy.html')" class="imagens_mapa" id="pans_icon" src="./imagens/Pans & Company/pans_logo.png" style="border-radius:25%;position: absolute; left: -4px; top: 60px; height: 12px; width: 12px;"></img>
+				<img onclick="setCookie('loja', 'Tasca do Manel', 1);setCookie('actual_loja', 'Tasca do Manel', 1);faz_descer('mapa_type_of_buy.html')" class="imagens_mapa" id="manel_icon" src="./imagens/Tasca do Manel/Tasca_do_Manel_logo.png" style="position: absolute; left: -17px; top: 51px; height: 12px; width: 12px;"></img>
+				<img class="imagens_mapa" id="friends_icon" src="./imagens/google_maps_icon.png" style="position: absolute; left: 65px; top: 20px; height: 18px; width: 14px;visibility:hidden;"></img>
+				<img  id="friends" onclick="faz_descer('friends_list.html')" src="./imagens/Main/friends.png" style="position: absolute; bottom: -1px; right: 2px; height: 25px; width: 25px;visibility:hidden;"></img>
+                
+				<img id="barra_dir" src="./imagens/vermelho_dir.png" width="10px" height="100%" style="position:absolute;right:0;top:0;visibility:hidden;"></img>
+				<img id="barra_esq" src="./imagens/vermelho_esq.png" width="10px" height="100%" style="position:absolute;left:0;top:0;visibility:hidden;"></img>
+				<img id="barra_cim" src="./imagens/vermelho_cim.png" width="100%" height="10px" style="position:absolute;left:0;top:0;visibility:hidden;"></img>
+				<img id="barra_bai" src="./imagens/vermelho_bai.png" width="100%" height="10px" style="position:absolute;left:0;bottom:0;visibility:hidden;"></img>
+				
+
+</div>
+				 
+								<!-- Popup Drones --> 				<div id="popup_drone" style="z-index:-50; "> 					<div style="height:15%;width:100%"> </div> 					<img style="height:40%;width:35%"onClick=";" id="popup_img_drone" alt="Escolha uma Categoria" src=""></img>                     <img style="" id="imagem_drone_way"src="./imagens/takeaway.png"></img> 					<div id="popup_confirm_drone" onClick="desaparecer_popup_drone()"> 						<button id="botao_ok" onClick="desaparecer_popup_drone()" type="button">Ok</button> 					</div> 				</div> 				<Marquee  style="z-Index:-1;font-size:small;width:100%;" id="popup_baixo_drone"	>cenas escritas </marquee>		 				<marquee style="z-Index:-1;" id="popup_cima_drone"> A encomenda chegou. Por favor siga as intruções no visor do drone</marquee>
+
+			</div>
+			<div id="real_image_lock"></div>
+			<div id="img_lock" onClick="goLock()"></div>
+			<div id="image_mais"></div>
+			<div id="but_mais" onClick="bigger()"></div>
+			<div id="image_menos"></div>
+			<div id="but_menos" onClick="smaller()"></div>
+			<div onClick="goUp();" onmousedown="goMainMenu()" id="back_button"></div>
+		</div>
+		
+		<div id="black_stripe"></div>
+	</center>
+	</TD>
+</body>
+</html>

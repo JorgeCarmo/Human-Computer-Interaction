@@ -1,0 +1,113 @@
+<HTML HEIGHT="100%" style="background: white;">
+<head>
+	<link href="main_watch.css"      rel="stylesheet" type="text/css"> <link/>
+	<link href="agenda.css"      	rel="stylesheet" type="text/css"> <link/>
+	<link href="mybcstyle.css"      rel="stylesheet" type="text/css"> <link/>
+	<script language="javascript" type="text/javascript" src="mybcparmsg.js"></script> 
+
+	<script src="dia.js"></script>
+	<script src="_.js"></script>
+	<script src="cookie.js"></script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<script src="drones.js"></script>
+	<script src="drone_popup.js"></script>
+	<link href="popup.css"      	rel="stylesheet" type="text/css"> <link/>
+	<link rel="stylesheet" href="owl-swipe/owl.carousel.min.css">
+	<link rel="stylesheet" href="owl-swipe/owl.theme.default.min.css">
+	
+</head>
+
+<BODY style="background: white;" onLoad="onLoadDia();dronesEverywhere();load_animation();">
+	<TABLE id="tabela" style="background: white;" Height="100%" WIDTH="100%" BORDER="0" >
+	<TD > 
+	<center>
+		<div id="black_stripe"></div>
+		
+		<div id="container">
+			<div id="ecra-edge"><div id="moving_ecra" class="">
+						<div id="texto_cima">Dia 1</div>
+							<div class="owl-carousel">
+							</div>
+							<div class="owl-carousel-2">
+							</div>
+							<div><p id="semA" style="position:absolute;top:25%;left:7%;font-size:12">Sem Actividades</div>
+							<div><p id="semA2" style="position:absolute;top:45%;left:23%;font-size:15;z-index:99" onClick="escolherAct()">Adicionar</div>
+						
+							
+							<div id="remove" style="display:none;">
+								<div><marquee id="rem" style="position:absolute;margin-top:3px;left:0%;font-size:14" >Remover</marquee></div>
+								<img id="rem_img2"></img>
+								<button id="botao2" onClick="removerN()" type="button" style="color:black">Não</button>
+								<button id="botao1" onClick="removerS()" type="button" style="color:red">Sim</button>
+							</div>
+							
+							<div>
+								<marquee style="visibility:hidden;" id="texto_cima3"></marquee>				
+								<img style="height:60%;width:60%;visibility:hidden;" class="img" id="img_central2" src=""></img>
+								<p style="visibility:hidden;" id="texto_baixo2"></p>
+							</div>
+							
+							<div>
+								<Marquee SCROLLAMOUNT="4" BEHAVIOR="SCROLL" DIRECTION="LEFT" style="margin-top: 5px; visibility:hidden;"id="texto_cima2">Actividade adicionada</marquee>				
+								<img style="height:60%;width:60%;visibility:hidden;" class="img" id="img_central" alt="Escolha uma Categoria" src="./imagens/Check.png"></img>
+								<button id="button_1" style="right:0.05in;bottom:0.05in;position:absolute;margin:0 auto;visibility:hidden;" onClick="setCookie('actual',0,1);faz_subir('dia1.html');"> Ok</button>
+
+							</div>
+				<!-- Popup Drones -->
+				<div id="popup_drone" style="z-index:-50; ">
+					<div style="height:15%;width:100%"> </div>
+					<img style="height:40%;width:35%"onClick=";" id="popup_img_drone" alt="Escolha uma Categoria" src=""></img>
+					<img style="" id="imagem_drone_way"src="./imagens/takeaway.png"></img>
+					<div id="popup_confirm_drone" onClick="desaparecer_popup_drone()">
+						<button id="botao_ok" onClick="desaparecer_popup_drone()" type="button">Ok</button>
+					</div>
+				</div> 
+				<Marquee  style="z-Index:-1;font-size:small;width:100%;" id="popup_baixo_drone"	>cenas escritas </marquee>		
+				<marquee style="z-Index:-1;" id="popup_cima_drone"> A encomenda chegou. Por favor siga as intruções no visor do drone</marquee>
+			</div></div>
+			<div id="real_image_lock"></div>
+			<div id="img_lock" onClick="goLock()"></div>
+			<div id="image_mais"></div>
+			<div id="but_mais" onClick="bigger()"></div>
+			<div id="image_menos"></div>
+			<div id="but_menos" onClick="smaller()"></div>
+			<div onClick="goUp()" onmousedown="goMainMenu()" id="back_button"></div>
+		</div>
+		<div id="black_stripe"></div>
+	</center>
+	</TD> 	
+	
+		<script src="jquery.min.js"></script>
+		<script src="owl-swipe/owl.carousel.js"></script>
+	
+	
+		<script type="text/javascript">
+            $('.owl-carousel').owlCarousel({
+				center: true,
+                items: 1,
+                loop: true,
+                dots: false,
+                nav: false,
+                stagePadding: 15
+			});
+			$('.owl-carousel').each(function(f){
+				if( $('.owl-carousel').find("div").length > 1 ){
+					$('.owl-carousel').owlCarousel({
+						loop: true
+						});
+				}
+			});
+			$('.owl-carousel').on('translate.owl.carousel', function(e){
+				idx = e.item.index;
+				$('.owl-item.big').removeClass('big');
+				$('.owl-item.medium').removeClass('medium');
+				$('.owl-item').eq(idx).addClass('big');
+				$('.owl-item').eq(idx-1).addClass('medium');
+				$('.owl-item').eq(idx+1).addClass('medium');
+			});
+		</script>
+	
+</body>
+</html>

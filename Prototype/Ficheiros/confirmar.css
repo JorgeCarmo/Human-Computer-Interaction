@@ -1,0 +1,47 @@
+#botoes{
+    position:absolute;
+    bottom: 0.02in;
+}
+#botao1{
+}
+
+#botao2{
+}
+
+#info_produto{
+    height: 60%;
+    width: 90%;
+    font-size: small;
+    text-align: center;
+}
+#img_confirm{
+    left:5%;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+}
+#Quantidade_txt{
+    right:35%;
+    position: absolute;
+    width:20%;
+    top:22%;
+}
+#uni{
+    top:22%;
+    width:30%;
+    right: 5%;
+    position: absolute;
+}
+#Preco{
+	position:absolute;
+	top:40%;
+	font-size: 11pt;
+	width:50%;
+    right:5%;
+    text-align: center;
+}
+#Item{
+    top: 62%;
+    left:0;
+    position: absolute;
+}

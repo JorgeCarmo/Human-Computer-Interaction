@@ -1,0 +1,91 @@
+
+
+.img_swipe{
+	top: 20%;
+	height: 50%;
+	width: 100%;
+	position: relative;
+
+}
+
+
+#ecra-edge{
+	overflow:hidden;
+}
+#texto_cima{
+	position:absolute;
+	font-size: small;
+	height: 15%;
+	width: 100%;
+	font-family: Trebuchet MS;
+	top:0.02in;
+	left:0;
+	color: black;
+}
+
+#texto_baixo{
+	position:absolute;
+	font-size:meddium;
+	height: 15%;
+	width: 100%;
+	font-family: Trebuchet MS;
+	bottom:0.1in;
+	color: black;
+	left: 2.5%;
+    
+}
+
+#texto_marquee{
+	position:relative;
+	font-size:small;
+	font-family: Trebuchet MS;
+	bottom:-0.32in;
+	width: 102px;
+	left: -33%
+}
+
+
+
+.owl-carousel .owl-item.medium #texto_marquee{
+
+display:none !important
+
+}
+.owl-carousel .owl-item.medium .img_swipe{
+    font-size: = "25pt";
+    
+
+}
+.owl-item{
+    width: 20px;
+    text-align:center;
+}
+.owl-carousel .owl-item.medium {
+    
+    -moz-transform:scale(0.80);
+-ms-transform:scale(0.80);
+-o-transform:scale(0.80);
+-webkit-transform:scale(0.80);
+transform:scale(0.80);
+    
+
+}
+
+
+
+.owl-carousel .owl-stage-outer{
+height: 105px;
+
+}
+
+#confirm_botao{
+	position: absolute;
+	bottom: 0.02in;
+}
+
+#botao1{
+	color: red;
+}
+#botao2{
+	color: black;
+}
